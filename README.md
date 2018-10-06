@@ -41,7 +41,7 @@ Simulated Annealing gave overall best results. Detailed report of study is given
 
 
 ## Conclusion:
-To conclude, all methods work for image classification. However, CNN gives great results with minimum prediction time.
+To conclude, both methods work for Traveling Salesman Problem. However, Simulated Annealing gives better results in short amount of time.
 
 
 ## Contact
