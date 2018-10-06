@@ -1,27 +1,43 @@
 # Traveling-Salesman-Problem
 
 ## Abstract:
-In this project, three methods were used to classify digits 1, 3, 4 and 8. The classification is done using kNN, Decision Tree and Convolutional Neural Network (CNN). First, image data is either normalized or scaled. Then it is fed to classifier.
+In this project, two methods were used for solving Traveling Salesman Problem. The problem is solved using Genetic Algorithm and Simulated Annealing.
+
 
 ## Methadology:
-First, training images (pixel values) and their labels are read. Then, classifier is trained using training data and labels. Finally, test data is used to evaluate training.
 
 ### 1) Data Set Selection:
-Dataset used here is a subset of MNIST data set which include images of 0-9 digits. In this project, only 1, 3, 4 and 8 were used for digit recognition. This dataset's main purpose is to compare different approaches of image classification. The code can be run on any dataset.
+For this study, **USCAP dataset** was used. This dataset contain 312 cities. Names of cities are given in uscap_name.txt file and NxN matrix giving distance between each pair of cities is given in usca312_dist.txt file. (Each city is directed connected with every other city). The x-y coordinated mapping of cities are given in usc312_xy.txt file, and 2D plot is given in usc312.png file. Some description of data is given in usca312_main.txt file. For more details see [link](http://people.sc.fsu.edu/~jburkardt/datasets/cities/cities.html).
 
-### 2) Feature Selection:
-It was found that many of the starting and ending bits of a number are zero. So, those bits were removed. It helped decrease feature length. It reduced prediction time for kNN by 10-15%.
+### 2) Chromosome Design
+Chromosome is represented as a list/array. Value in index(i) and index(i+1) represents path from i to i+1.
 
-### 3) Data Pre-processing:
-After reading data and removing features in feature selection, data was preprocessed. In this case, normalization and scaling were tested.
+### 3) Fitness Function
+In this problem, fitness is the negative of sum of distance of path.
 
-### 4) Machine Learning Algorithm:
-As I am using supervised learning approach to classify, I used kNN, Decision Tree and Convolutional Neural Network (CNN).
+
+### 4.1) Setting of Simulated Annealing
+
+#### a) Actions and Successor Function
+Randomly selecting two indices and reversing path between them.
+
+#### b) Schedule Function
+Schedule function = **a - t/b** where a and b are variables.
+* a: initial value of temperature.
+* b: rate at which temperature decrease.
+
+
+### 4.2) Setting of Genetic Algorithm
+
+#### a) Crossover Method
+Partially Mapped Crossover(PMX) was used.
+
+#### b) Mutation Method
+Replacing one value with another random value and replacing value of index having this new value with old value of first index.
 
 
 ## Results:
-I got good results from all the methods. Both kNN and CNN gave best results. Moreover, Decision Tree and CNN were better performance wise.
-Detailed results are given in Reports folder.
+Simulated Annealing gave overall best results. Detailed report of study is given in [Report](../master/Report.docx).
 
 
 ## Conclusion:
