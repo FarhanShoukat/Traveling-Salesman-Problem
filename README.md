@@ -1,7 +1,7 @@
 # Traveling-Salesman-Problem
 
 ## Abstract:
-In this project, two methods were used for solving Traveling Salesman Problem. The problem is solved using Genetic Algorithm and Simulated Annealing.
+In this study, two methods were used for solving Traveling Salesman Problem. The problem is solved using Genetic Algorithm and Simulated Annealing.
 
 
 ## Methadology:
