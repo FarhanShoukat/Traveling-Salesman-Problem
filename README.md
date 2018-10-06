@@ -37,11 +37,11 @@ Replacing one value with another random value and replacing value of index havin
 
 
 ## Results:
-Simulated Annealing gave overall best results. Detailed report of study is given in [Report](../master/Report.docx).
+Simulated Annealing gave overall best results. Detailed results of study is given in [Report](../master/Report.docx).
 
 
 ## Conclusion:
-To conclude, both methods work for Traveling Salesman Problem. However, Simulated Annealing gives better results in short amount of time.
+To conclude, both methods work for Traveling Salesman Problem. However, Simulated Annealing gives better results in short amount of time. Detailed report is given in [Report](../master/Report.docx).
 
 
 ## Contact
